@@ -1,0 +1,99 @@
+:root{
+  --ink:#1B2A4A; --ink-soft:#3B4A6B; --paper:#FAF7F0; --paper-dim:#F1ECDF;
+  --gold:#C9922B; --sage:#4F7965; --rust:#B4432F; --line:#D8D2C4; --white:#FFFFFF;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;margin:0 0 .4em;color:var(--ink);}
+a{color:var(--ink);}
+.container{max-width:1080px;margin:0 auto;padding:0 24px;}
+button,input,select,textarea{font-family:inherit;font-size:15px;}
+button{cursor:pointer;}
+.btn{display:inline-block;padding:11px 22px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:2px;font-weight:600;text-decoration:none;}
+.btn:hover{background:var(--ink-soft);}
+.btn-outline{background:transparent;color:var(--ink);}
+.btn-outline:hover{background:var(--ink);color:var(--paper);}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+.btn-gold:hover{opacity:.85;}
+input[type=text],input[type=email],input[type=password],textarea,select{
+  width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:2px;background:var(--white);margin-bottom:14px;color:var(--ink);
+}
+label{font-size:13px;font-weight:600;color:var(--ink-soft);display:block;margin-bottom:4px;}
+.field{margin-bottom:14px;}
+
+/* NAV */
+nav{border-bottom:2px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:10;}
+.navwrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+.brand{font-family:Georgia,serif;font-weight:bold;font-size:22px;letter-spacing:.5px;}
+.brand span{color:var(--gold);}
+.navlinks{display:flex;align-items:center;}
+.navlinks a{margin-left:24px;text-decoration:none;font-size:14px;font-weight:600;}
+.navcta{margin-left:24px !important;padding:8px 16px;}
+
+/* HERO */
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--line);}
+.hero h1{font-size:44px;max-width:640px;line-height:1.15;}
+.hero p{max-width:520px;font-size:17px;color:var(--ink-soft);}
+.hero .cta{margin-top:22px;}
+.hero .cta .btn{margin-right:12px;}
+
+/* SECTIONS */
+section{padding:56px 0;border-bottom:1px solid var(--line);}
+.eyebrow-row{display:flex;align-items:baseline;gap:10px;margin-bottom:28px;}
+.eyebrow-row h2{font-size:28px;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.step{border-left:3px solid var(--gold);padding-left:14px;}
+.step .num{font-family:Georgia,serif;font-size:26px;color:var(--gold);font-weight:bold;}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start;}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.tcard{background:var(--paper-dim);padding:20px;border-left:3px solid var(--ink);}
+.tcard p{font-style:italic;margin:0 0 10px;}
+.tcard .who{font-weight:700;font-size:13px;color:var(--ink-soft);}
+footer{padding:40px 0;background:var(--ink);color:var(--paper-dim);}
+.footwrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;}
+footer a{color:var(--paper-dim);}
+.contact-form{max-width:420px;}
+.ok-msg{color:var(--sage);font-size:13px;min-height:16px;}
+@media(max-width:800px){.steps,.about-grid,.testimonials{grid-template-columns:1fr;}}
+
+/* AUTH */
+.auth-wrap{min-height:80vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;}
+.auth-card{background:var(--white);border:1px solid var(--line);padding:36px;width:100%;max-width:400px;border-left:4px solid var(--gold);}
+.auth-card h2{margin-bottom:6px;}
+.sub{color:var(--ink-soft);font-size:14px;margin-bottom:22px;}
+.role-toggle{display:flex;gap:10px;margin-bottom:16px;}
+.role-toggle label{flex:1;border:1px solid var(--line);padding:9px;text-align:center;border-radius:2px;cursor:pointer;font-size:13px;}
+.role-toggle input{width:auto;margin-right:6px;}
+.switch-line{margin-top:16px;font-size:14px;text-align:center;}
+.err{color:var(--rust);font-size:13px;margin:-8px 0 12px;min-height:16px;}
+
+/* DASHBOARD */
+.dash-header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:2px solid var(--ink);margin-bottom:28px;}
+.who{font-size:13px;color:var(--ink-soft);}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;}
+.stat{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);padding:16px 18px;}
+.stat .n{font-family:Georgia,serif;font-size:30px;font-weight:bold;}
+.stat .l{font-size:13px;color:var(--ink-soft);}
+.panel{background:var(--white);border:1px solid var(--line);padding:22px;margin-bottom:26px;}
+.panel h3{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:16px;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-soft);}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:12px;font-weight:600;}
+.badge.pending{background:#F3E0DA;color:var(--rust);}
+.badge.resolved{background:#DCEAE3;color:var(--sage);}
+.dash-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;}
+@media(max-width:850px){.dash-grid,.stat-row{grid-template-columns:1fr;}}
+.res-item{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;}
+.res-item .tag{font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;}
+
+/* AI ASSISTANT */
+.ai-box{background:var(--ink);color:var(--paper);padding:20px;}
+.ai-box h3{color:var(--paper);border-bottom:1px solid #ffffff33;}
+.ai-log{max-height:220px;overflow-y:auto;margin-bottom:12px;font-size:14px;}
+.ai-msg{padding:8px 10px;border-radius:4px;margin-bottom:8px;max-width:90%;}
+.ai-msg.user{background:#ffffff22;margin-left:auto;text-align:right;}
+.ai-msg.bot{background:var(--gold);color:var(--ink);}
+.ai-row{display:flex;gap:8px;}
+.ai-row input{margin-bottom:0;background:#ffffff11;color:var(--paper);border-color:#ffffff33;}
+.ai-row input::placeholder{color:#ffffffaa;}
